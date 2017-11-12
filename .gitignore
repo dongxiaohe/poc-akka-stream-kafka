@@ -1,0 +1,6 @@
+target/
+/.idea
+/.cache
+.*.sw*
+/script/env
+/src/main/resources/development-local.conf
