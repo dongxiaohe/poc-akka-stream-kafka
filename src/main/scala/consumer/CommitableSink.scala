@@ -23,7 +23,7 @@ object CommitableSink extends App {
     ConsumerSettings(system, new ByteArrayDeserializer, new StringDeserializer)
       .withBootstrapServers("localhost:9092")
       .withGroupId("CommittableSourceConsumer")
-      .withProperty(ConsumerConfig.AUTO_OFFSET_RESET_CONFIG, "earliest")
+      .withProperty(ConsumerConfig.AUTO_OFFSET_RESET_CONFIG, "false")
 
   val done =
     Consumer.committableSource(consumerSettings, Subscriptions.topics("topic1"))

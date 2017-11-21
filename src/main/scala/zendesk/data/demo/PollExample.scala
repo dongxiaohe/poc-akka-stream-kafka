@@ -26,7 +26,7 @@ object PollExample extends App {
   val consumer = new KafkaConsumer[String, String](props)
 
   consumer.subscribe(List("bar").asJava)
-//  consumer.poll(1000)
+  consumer.poll(1000)
 //  consumer.assign(List(new TopicPartition("foo", 0)).asJava)
 //  consumer.seek(new TopicPartition("bar", 0), 1)
 //  consumer.commitSync(Map(new TopicPartition("bar", 0) -> new OffsetAndMetadata(1)).asJava)
